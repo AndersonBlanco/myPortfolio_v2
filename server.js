@@ -1,3 +1,4 @@
+alert("rendering done.")
 function loadDoc(){
     const xhttp = new XMLHttpRequest();
     xhttp.onload = function(){
@@ -17,4 +18,3 @@ function loadDoc(){
 
 
 window.onload = () => loadDoc();
-alert("rendering done.")
