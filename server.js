@@ -16,4 +16,5 @@ function loadDoc(){
 
 
 
-window.onload = () => loadDoc(); 
+window.onload = () => loadDoc();
+alert("rendering done.")
