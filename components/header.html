@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     
+ 
+      .header_container{
+        width: 100%;
+        height: 100%;
+        text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: black; 
+    padding-block: 15rem;
+    z-index: 1; 
+      }
+
+     .header_container h1{
+      color: white; 
+
+     }
+
+     .header_container .shadowCloud1{
+      height: 100%;
+      width: 150%;
+      background-color: rgb(39, 39, 39);
+      border-radius: 2.5rem;
+      position: absolute;
+      transform: rotateZ(27deg) translateX(-20rem) translateY(25rem); 
+       display: flex;
+       flex-direction: row;
+
+
+     }
+
+     .shadowCloud1 .bump{
+      background-color:rgb(39, 39, 39);
+      height: 10rem;
+      width: 20rem;
+      border-radius: 50%;
+      position: relative;
+      right: -5%;
+      top: -11.5%;
+      margin-inline: 5rem;
+      margin-block: 5rem;
+      transition-duration: 1s;
+
+     }
+
+     .shadowCloud1 .overlapingBump{
+      background-color:rgb(99, 99, 99); 
+      height: 10rem;
+      width: 20rem;
+      border-radius: 50%;
+      position: absolute;
+      right: 50%;
+      top: -4.5%;
+      margin-inline: 1rem; 
+
+      transition-duration: 1s;
+     }
+    </style>
+</head>
+<body>
+    <div class = 'header_container'>
+        <h1>Anderson Blanco</h1>
+
+        <div id = 'shadowCloud1' class = 'shadowCloud1'>
+          <div id = 'examplarBump' class = 'bump'></div>
+          <div class = 'bump'></div>
+          <div class = 'bump'></div>
+          <div class = 'bump'></div>
+          <div class = 'bump'></div>
+    
+            <div class = 'overlapingBump'></div>
+            <div class = 'overlapingBump'></div>
+            <div class = 'overlapingBump'></div>
+            <div class = 'overlapingBump'></div>
+            <div class = 'overlapingBump'></div>
+        </div>
+
+
+    </div>
+
+    <script>
+      for(let bum = 0; bump >= 10; bump ++){
+        document.getElementById('shadowCloud1').innerHTML += `
+        <div id = "bump${bump}" class = "bump"></div> 
+        `; 
+      }
+
+
+    </script>
+</body>
+</html>

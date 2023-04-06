@@ -1,0 +1,16 @@
+html{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(226, 226, 226); 
+    padding: 0rem; 
+}
+
+body{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(209, 209, 209); 
+    padding: 0rem;
+    margin: 0rem;
+}
