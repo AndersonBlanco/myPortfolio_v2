@@ -1,4 +1,4 @@
-//alert("rendering done.")
+
 
 const script1 = document.createElement('script');
 script1.src = 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js';
@@ -16,8 +16,7 @@ function loadDoc(){
     xhttp.onload = function(){
         const resp = JSON.parse(this.responseText);  
         document.getElementById('root').innerHTML = `
-         
-        <h4> HI </h4> 
+         <h4> HI </h4> 
           
         `; 
     }
