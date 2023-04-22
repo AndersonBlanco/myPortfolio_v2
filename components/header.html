@@ -12,99 +12,27 @@
     rel="stylesheet">
         <style>
      
- 
-      .header_container{
-        width: 100%;
-        height: fit-content;
-        padding-block-end: 5rem; 
+      body{
+        
         text-align: center;
     justify-content: center;
     align-items: center;
-    background-color: rgb(18, 18, 18); 
-    color: white; 
-  
       }
+      .header_container{
+        width: 100%;
+        height: 100%;
+        padding-bottom: 2.5rem;
 
-     .header_container h1{
-      color: rgba(0, 0, 0, 0); 
-
-     }
-
-     .header_container .shadowCloud1{
-      height: 100%;
-      width: 150%;
-      background-color: rgb(39, 39, 39);
-      border-radius: 2.5rem;
-      position: absolute;
-      transform: rotateZ(27deg) translateX(-20rem) translateY(25rem); 
-       display: flex;
-       flex-direction: row;
-
-
-     }
-
-     .shadowCloud1 .bump{
-      background-color:rgb(39, 39, 39);
-      height: 10rem;
-      width: 20rem;
-      border-radius: 50%;
-      position: relative;
-      right: -5%;
-      top: -11.5%;
-      margin-inline: 5rem;
-      margin-block: 5rem;
-      transition-duration: 1s;
-
-     }
-
-     .shadowCloud1 .overlapingBump{
-      background-color:rgb(99, 99, 99); 
-      height: 10rem;
-      width: 20rem;
-      border-radius: 50%;
-      position: absolute;
-      right: 50%;
-      top: -4.5%;
-      margin-inline: 1rem; 
-
-      transition-duration: 1s;
-     }
-
-
-     .header_container ul{
-      list-style-type: none;
-      display: flex;
-      flex-direction: column;
-      background-color: rgba(128, 128, 128, 0); 
-      width: fit-content;
-      padding-block: 1rem;
-      text-align: center;
-      justify-content: center;
-      align-items: center;
-      margin-top: 15rem;
-      padding-inline: 0rem; 
-    
-     }
-
-     .header_container ul li{
-      margin-block: 2.5rem;
-
-      text-align: center;
-      justify-content: center;
-      align-items: center;
-      cursor: pointer; 
-      width: 10rem;
-      transition-duration: .5s;
-      font-size: 2rem;
-     }
-
-     .header_container ul li:hover{
-      color: black;
-      background-color: white;
-      width: 100%; 
-      transition-duration: .5s; 
-     }
-
+        text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(53, 53, 53, 0); 
+    color: white; 
+margin-bottom: 2rem;
+scroll-behavior: smooth;
+z-index: 0;
+      }
+ 
 
 .icon{
       font-family: 'Material Icons';
@@ -128,6 +56,9 @@
 
   /* Support for IE. */
   font-feature-settings: 'liga';
+
+
+
      }
 
 
@@ -144,7 +75,8 @@
   font-size: 10rem;
   position: relative;
   z-Index:0; 
-  color:rgb(19, 19, 19); background-color: rgb(19, 19, 19);
+  color:rgb(19, 19, 19);
+   background-color: rgb(19, 19, 19);
 }
 
 #circle{
@@ -162,32 +94,202 @@
 
 
 }
-    </style>
+
+
+
+
+ul{
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  width: fit-content;
+  height: 100%; 
+  justify-content:center;
+  align-items: center;
+background-color: rgba(0, 128, 0, 0);
+  background-attachment: scroll;
+  position: fixed;
+  float: left; 
+}
+
+ul::-webkit-scrollbar{
+
+}
+ul li{
+    cursor: pointer; 
+  display: flex;
+  flex-direction: row; 
+  flex-wrap: wrap; 
+  background-color: rgba(255, 138, 138, 0); 
+height:fit-content;
+margin-block: 2rem;
+user-select: none;
+}
+
+ ul li h2{
+ 
+  font-size: 1.75rem; 
+  text-decoration: solid underline rgba(255, 255, 255, 0); 
+  transition-duration: .5s;
+  cursor: pointer; 
+
+  background-color: rgba(100, 100, 100, 0); 
+
+}
+
+ul li i{
+  background-color: rgba(0, 128, 0, 0); 
+  padding-top: 1.75rem;
+  font-size: 1.5rem;
+  margin-inline-start: .5rem;
+ 
+}
+
+ul li i:hover{
+
+}
+ul li h2:hover{
+  text-decoration-color: white; 
+}
+
+.sect{
+  width: 100%;
+  height: fit-content;
+  justify-content:center;
+  align-items: center;
+  position: absolute;
+  bottom: 0rem;
+
+}
+
+.sect i{
+  background-color: rgba(0, 128, 0, 0); 
+  font-size: 5rem;
+  transition-duration: 1s;
+  animation-duration: 2s;
+  animation-name: opaching;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  color:rgb(255, 255, 255);
+  cursor: pointer; 
+  user-select: none;
+}
+
+@keyframes opaching{
+  from{opacity: 0.25}
+  to{opacity: .75}
+}
+
+.inline{
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  height: fit-content;
+  width: 100%;
+}
+  
+.textARea{
+  background-color: rgba(166, 166, 166, 0);
+ 
+ padding-left: 20rem;
+ float: right;
+ height: 100rem;
+ width: 40%;
+ padding-block: 17rem;
+ align-items:right;
+ justify-content: right;
+ text-align: right;
+
+ 
+  background-image: url('./svgs/blob.svg'); 
+ background-repeat: no-repeat;
+background-position-x: 5rem;
+background-position-y: -2rem;
+
+ 
+}
+
+.textARea *{
+ 
+  font-size: 1.2rem;
+  text-align:left; 
+  align-items: left;
+  justify-content: left;
+   align-self: left;
+  background-color: rgba(255, 0, 0, 0);
+ 
+  color:rgb(10, 10, 10);
+}
+
+.textArea h1{
+  font-size: 3.4rem;
+  color: rgba(0, 68, 255, 0.907);
+}
+
+@media only screen and (max-height: 620px)  {
+  .textARea{
+  background-color: rgba(166, 166, 166, 0);
+ 
+ padding-left: 20rem;
+ float: right;
+ height: 100rem;
+ width: 40%;
+ padding-block: 17rem;
+ align-items:right;
+ justify-content: right;
+ text-align: right;
+
+ 
+  background-image: url('./svgs/blob.svg'); 
+ background-repeat: no-repeat;
+background-position-x: 5rem;
+background-position-y: -10rem;
+
+ 
+}
+}
+
+ 
+  </style>
 </head>
 <body>
   <div class = 'header_container'>
-    <h1>a</h1>
+  
+   
      <ul>
-      <li>Home <i class = 'icon'>home</i></li>
-      <li>Projects</li>
-      <li>Socials</li>
-      <li>Others</li>
+      <li><h2>Home</h2><i class = 'icon'>home</i></li>
+      <li><h2>Projects</h2></li>
+      <li><h2>Socials</h2></li>
+      <li><h2>Others</h2></li>
       </ul>
 
-     
-      <span id = 'circle' class="material-symbols-outlined">
-        circle
-        </span>
         
-        <span id = 'square' class= 'material-symbols-outlined'>crop_square</span>
+         
+      <div class = 'textArea'>
+        <h1>Anderson Blanco</h1>
+        <h5>Up-coming junior software dev and computer progerammer</h5>
+        <h5>I love challanges, intereacting with people and enjoy the work i do</h5>
+        <h5>Check some of my works below!</h5>
+        
+      </div>
 
+ 
+      
 
-        <span id = 'circle' class="material-symbols-outlined">
-          circle
-          </span>
+ 
+      <div class = 'sect' id = 'autoScrollDown_div'>
+<div class = 'inline'>
+        <i id = 'pointerArrow_downNextSect' class = 'icon'>keyboard_double_arrow_down</i>
+        <p>Scroll Down</p>
+        <i id = 'pointerArrow_downNextSect' class = 'icon'>keyboard_double_arrow_down</i>
+</div>
+      </div>
+     
+     
           
-          <span id = 'square' class= 'material-symbols-outlined'>crop_square</span>
-
+       <!--  <span id = 'square' class= 'material-symbols-outlined'>crop_square</span> -->  
 </div>
     <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
   <script>
@@ -241,8 +343,13 @@ cirAnimation.add({
 });
 
 
- 
+document.getElementById('autoScrollDown_div').onclick = () =>{
+  document.getElementById('center').scrollIntoView({behavior:'smooth', duration: 2500});
+}
 
+
+ 
+ 
     </script>
 
 
